@@ -20,9 +20,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     var captureDevice:AVCaptureDevice!
     
     var takePhoto = false
-    
     var frontCamera: Bool = false
-    
     var flashEnabled: Bool = false
     
     override func viewDidLoad() {

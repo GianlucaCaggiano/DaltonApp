@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A8244D61EF8238900EE8A50 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8244D51EF8238900EE8A50 /* IntentHandler.swift */; };
+		1A8244DF1EF8238A00EE8A50 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8244DE1EF8238A00EE8A50 /* IntentsUI.framework */; };
+		1A8244E21EF8238A00EE8A50 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8244E11EF8238A00EE8A50 /* IntentViewController.swift */; };
+		1A8244E51EF8238A00EE8A50 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A8244E31EF8238A00EE8A50 /* MainInterface.storyboard */; };
+		1A8244E91EF8238A00EE8A50 /* Estensione_SiriUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1A8244DC1EF8238900EE8A50 /* Estensione_SiriUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1A8244EC1EF8238A00EE8A50 /* Estensione_Siri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1A8244D31EF8238900EE8A50 /* Estensione_Siri.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		33FE044E1EF7CA6E009436ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE044D1EF7CA6E009436ED /* AppDelegate.swift */; };
 		33FE04551EF7CA6E009436ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33FE04541EF7CA6E009436ED /* Assets.xcassets */; };
 		33FE04581EF7CA6E009436ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33FE04561EF7CA6E009436ED /* LaunchScreen.storyboard */; };
@@ -20,7 +26,48 @@
 		33FE046E1EF7CB47009436ED /* Fotocamera.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FE046D1EF7CB47009436ED /* Fotocamera.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1A8244E71EF8238A00EE8A50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33FE04421EF7CA6E009436ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A8244DB1EF8238900EE8A50;
+			remoteInfo = Estensione_SiriUI;
+		};
+		1A8244EA1EF8238A00EE8A50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33FE04421EF7CA6E009436ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A8244D21EF8238900EE8A50;
+			remoteInfo = Estensione_Siri;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1A8244F31EF8238A00EE8A50 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1A8244EC1EF8238A00EE8A50 /* Estensione_Siri.appex in Embed App Extensions */,
+				1A8244E91EF8238A00EE8A50 /* Estensione_SiriUI.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1A8244D31EF8238900EE8A50 /* Estensione_Siri.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Estensione_Siri.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A8244D51EF8238900EE8A50 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		1A8244D71EF8238900EE8A50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A8244DC1EF8238900EE8A50 /* Estensione_SiriUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Estensione_SiriUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A8244DE1EF8238A00EE8A50 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		1A8244E11EF8238A00EE8A50 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		1A8244E41EF8238A00EE8A50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		1A8244E61EF8238A00EE8A50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ACD3FCB1EF81FB400AC5B17 /* DaltonApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DaltonApp.entitlements; sourceTree = "<group>"; };
 		33FE044A1EF7CA6E009436ED /* DaltonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaltonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FE044D1EF7CA6E009436ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33FE04541EF7CA6E009436ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,6 +84,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1A8244D01EF8238900EE8A50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A8244D91EF8238900EE8A50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A8244DF1EF8238A00EE8A50 /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33FE04471EF7CA6E009436ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,10 +109,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A8244D41EF8238900EE8A50 /* Estensione_Siri */ = {
+			isa = PBXGroup;
+			children = (
+				1A8244D51EF8238900EE8A50 /* IntentHandler.swift */,
+				1A8244D71EF8238900EE8A50 /* Info.plist */,
+			);
+			path = Estensione_Siri;
+			sourceTree = "<group>";
+		};
+		1A8244DD1EF8238A00EE8A50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A8244DE1EF8238A00EE8A50 /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A8244E01EF8238A00EE8A50 /* Estensione_SiriUI */ = {
+			isa = PBXGroup;
+			children = (
+				1A8244E11EF8238A00EE8A50 /* IntentViewController.swift */,
+				1A8244E31EF8238A00EE8A50 /* MainInterface.storyboard */,
+				1A8244E61EF8238A00EE8A50 /* Info.plist */,
+			);
+			path = Estensione_SiriUI;
+			sourceTree = "<group>";
+		};
 		33FE04411EF7CA6E009436ED = {
 			isa = PBXGroup;
 			children = (
 				33FE044C1EF7CA6E009436ED /* DaltonApp */,
+				1A8244D41EF8238900EE8A50 /* Estensione_Siri */,
+				1A8244E01EF8238A00EE8A50 /* Estensione_SiriUI */,
+				1A8244DD1EF8238A00EE8A50 /* Frameworks */,
 				33FE044B1EF7CA6E009436ED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				33FE044A1EF7CA6E009436ED /* DaltonApp.app */,
+				1A8244D31EF8238900EE8A50 /* Estensione_Siri.appex */,
+				1A8244DC1EF8238900EE8A50 /* Estensione_SiriUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +160,7 @@
 		33FE044C1EF7CA6E009436ED /* DaltonApp */ = {
 			isa = PBXGroup;
 			children = (
+				1ACD3FCB1EF81FB400AC5B17 /* DaltonApp.entitlements */,
 				33FE044D1EF7CA6E009436ED /* AppDelegate.swift */,
 				33FE04541EF7CA6E009436ED /* Assets.xcassets */,
 				33FE04561EF7CA6E009436ED /* LaunchScreen.storyboard */,
@@ -85,6 +180,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1A8244D21EF8238900EE8A50 /* Estensione_Siri */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A8244F21EF8238A00EE8A50 /* Build configuration list for PBXNativeTarget "Estensione_Siri" */;
+			buildPhases = (
+				1A8244CF1EF8238900EE8A50 /* Sources */,
+				1A8244D01EF8238900EE8A50 /* Frameworks */,
+				1A8244D11EF8238900EE8A50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Estensione_Siri;
+			productName = Estensione_Siri;
+			productReference = 1A8244D31EF8238900EE8A50 /* Estensione_Siri.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		1A8244DB1EF8238900EE8A50 /* Estensione_SiriUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A8244F11EF8238A00EE8A50 /* Build configuration list for PBXNativeTarget "Estensione_SiriUI" */;
+			buildPhases = (
+				1A8244D81EF8238900EE8A50 /* Sources */,
+				1A8244D91EF8238900EE8A50 /* Frameworks */,
+				1A8244DA1EF8238900EE8A50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Estensione_SiriUI;
+			productName = Estensione_SiriUI;
+			productReference = 1A8244DC1EF8238900EE8A50 /* Estensione_SiriUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		33FE04491EF7CA6E009436ED /* DaltonApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33FE045C1EF7CA6E009436ED /* Build configuration list for PBXNativeTarget "DaltonApp" */;
@@ -92,10 +221,13 @@
 				33FE04461EF7CA6E009436ED /* Sources */,
 				33FE04471EF7CA6E009436ED /* Frameworks */,
 				33FE04481EF7CA6E009436ED /* Resources */,
+				1A8244F31EF8238A00EE8A50 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1A8244E81EF8238A00EE8A50 /* PBXTargetDependency */,
+				1A8244EB1EF8238A00EE8A50 /* PBXTargetDependency */,
 			);
 			name = DaltonApp;
 			productName = DaltonApp;
@@ -112,9 +244,25 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Gianluca Caggiano";
 				TargetAttributes = {
+					1A8244D21EF8238900EE8A50 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = ZDFHRMBA66;
+						ProvisioningStyle = Automatic;
+					};
+					1A8244DB1EF8238900EE8A50 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = ZDFHRMBA66;
+						ProvisioningStyle = Automatic;
+					};
 					33FE04491EF7CA6E009436ED = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = ZDFHRMBA66;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -132,11 +280,28 @@
 			projectRoot = "";
 			targets = (
 				33FE04491EF7CA6E009436ED /* DaltonApp */,
+				1A8244D21EF8238900EE8A50 /* Estensione_Siri */,
+				1A8244DB1EF8238900EE8A50 /* Estensione_SiriUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1A8244D11EF8238900EE8A50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A8244DA1EF8238900EE8A50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A8244E51EF8238A00EE8A50 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33FE04481EF7CA6E009436ED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -155,6 +320,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1A8244CF1EF8238900EE8A50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A8244D61EF8238900EE8A50 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A8244D81EF8238900EE8A50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A8244E21EF8238A00EE8A50 /* IntentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33FE04461EF7CA6E009436ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,7 +348,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1A8244E81EF8238A00EE8A50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A8244DB1EF8238900EE8A50 /* Estensione_SiriUI */;
+			targetProxy = 1A8244E71EF8238A00EE8A50 /* PBXContainerItemProxy */;
+		};
+		1A8244EB1EF8238A00EE8A50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A8244D21EF8238900EE8A50 /* Estensione_Siri */;
+			targetProxy = 1A8244EA1EF8238A00EE8A50 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		1A8244E31EF8238A00EE8A50 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A8244E41EF8238A00EE8A50 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		33FE04561EF7CA6E009436ED /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -179,6 +381,58 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1A8244ED1EF8238A00EE8A50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = ZDFHRMBA66;
+				INFOPLIST_FILE = Estensione_Siri/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Osvaldo.DaltonApp.Estensione-Siri";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1A8244EE1EF8238A00EE8A50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = ZDFHRMBA66;
+				INFOPLIST_FILE = Estensione_Siri/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Osvaldo.DaltonApp.Estensione-Siri";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1A8244EF1EF8238A00EE8A50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = ZDFHRMBA66;
+				INFOPLIST_FILE = Estensione_SiriUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Osvaldo.DaltonApp.Estensione-SiriUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1A8244F01EF8238A00EE8A50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = ZDFHRMBA66;
+				INFOPLIST_FILE = Estensione_SiriUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Osvaldo.DaltonApp.Estensione-SiriUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		33FE045A1EF7CA6E009436ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -275,11 +529,12 @@
 		33FE045D1EF7CA6E009436ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZDFHRMBA66;
 				INFOPLIST_FILE = DaltonApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GianlucaCaggiano.DaltonApp;
+				PRODUCT_BUNDLE_IDENTIFIER = Osvaldo.DaltonApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -288,11 +543,12 @@
 		33FE045E1EF7CA6E009436ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZDFHRMBA66;
 				INFOPLIST_FILE = DaltonApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GianlucaCaggiano.DaltonApp;
+				PRODUCT_BUNDLE_IDENTIFIER = Osvaldo.DaltonApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -301,6 +557,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1A8244F11EF8238A00EE8A50 /* Build configuration list for PBXNativeTarget "Estensione_SiriUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A8244EF1EF8238A00EE8A50 /* Debug */,
+				1A8244F01EF8238A00EE8A50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1A8244F21EF8238A00EE8A50 /* Build configuration list for PBXNativeTarget "Estensione_Siri" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A8244ED1EF8238A00EE8A50 /* Debug */,
+				1A8244EE1EF8238A00EE8A50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		33FE04451EF7CA6E009436ED /* Build configuration list for PBXProject "DaltonApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
