@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="prova" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DaltonApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -42,13 +42,13 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VH5-XQ-yKy">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VH5-XQ-yKy">
                                 <rect key="frame" x="260" y="88" width="36" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="36" id="Kz6-q5-qR7"/>
                                     <constraint firstAttribute="height" constant="46" id="qgL-gJ-BeX"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="icons8-Flash Off-50 (1).png"/>
+                                <state key="normal" backgroundImage="icons8-Flash On-50 (1).png"/>
                                 <connections>
                                     <action selector="activeFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yTX-9c-sVm"/>
                                 </connections>
@@ -106,6 +106,7 @@
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="gtC-dz-4Ky" id="0dQ-Vr-5eu"/>
+                        <outlet property="flashImg" destination="VH5-XQ-yKy" id="zoG-if-gTC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -115,7 +116,7 @@
         <!--Photo View Controller-->
         <scene sceneID="TQf-9J-SRI">
             <objects>
-                <viewController storyboardIdentifier="PhotoVC" id="Igs-uC-hbY" customClass="PhotoViewController" customModule="prova" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoVC" id="Igs-uC-hbY" customClass="PhotoViewController" customModule="DaltonApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CPV-Ye-m5q"/>
                         <viewControllerLayoutGuide type="bottom" id="dpW-jM-0nD"/>
@@ -152,6 +153,6 @@
         <image name="Fotocamera.png" width="64" height="63"/>
         <image name="frontale.png" width="48" height="36"/>
         <image name="galleria.png" width="50" height="42"/>
-        <image name="icons8-Flash Off-50 (1).png" width="50" height="50"/>
+        <image name="icons8-Flash On-50 (1).png" width="50" height="50"/>
     </resources>
 </document>

@@ -16,11 +16,14 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     let captureSession = AVCaptureSession()
     var previewLayer:CALayer!
     
+    @IBOutlet weak var flashImg: UIButton!
     var captureDevice:AVCaptureDevice!
     
     var takePhoto = false
     
     var frontCamera: Bool = false
+    
+    var flashEnabled: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,12 +51,14 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         if (frontCamera == false) {
             if let availableDevices = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .front).devices {
                 frontCamera = true;
+                flashImg.isHidden = true
                 captureDevice = availableDevices.first
                 beginSession()
             }
         }
         else {
             if let availableDevices = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .back).devices {
+                flashImg.isHidden = false
                 frontCamera = false;
                 captureDevice = availableDevices.first
                 beginSession()
@@ -158,12 +163,23 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     //attiva il flash alla fotocamera
     @IBAction func activeFlash(_ sender: Any) {
-        if captureDevice!.hasTorch{
-            do{
-                try captureDevice.lockForConfiguration()
-                captureDevice!.torchMode = captureDevice!.isTorchActive ? AVCaptureTorchMode.off : AVCaptureTorchMode.on
-                
-                captureDevice!.unlockForConfiguration()
+        if captureDevice!.hasTorch {
+            do {
+                if (flashEnabled == false) {
+                    flashImg.setImage(UIImage(named: "icons8-Flash Off-50 (1).png"), for: .normal)
+                    try captureDevice.lockForConfiguration()
+                    captureDevice!.torchMode =  AVCaptureTorchMode.on
+                    captureDevice!.unlockForConfiguration()
+                    flashEnabled = true
+                }
+                else {
+                    flashImg.setImage(nil, for: .normal)
+                    flashImg.setImage(UIImage(named: "icons8-Flash On-50 (1).png"), for: .normal)
+                    try captureDevice.lockForConfiguration()
+                    captureDevice!.torchMode =  AVCaptureTorchMode.off
+                    captureDevice!.unlockForConfiguration()
+                    flashEnabled = false
+                }
             }catch{
                 
             }
