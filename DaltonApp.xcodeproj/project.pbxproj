@@ -251,7 +251,6 @@
 					};
 					1A8244DB1EF8238900EE8A50 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = ZDFHRMBA66;
 						ProvisioningStyle = Automatic;
 					};
 					33FE04491EF7CA6E009436ED = {
@@ -410,7 +409,7 @@
 		1A8244EF1EF8238A00EE8A50 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = ZDFHRMBA66;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Estensione_SiriUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Osvaldo.DaltonApp.Estensione-SiriUI";
@@ -423,7 +422,7 @@
 		1A8244F01EF8238A00EE8A50 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = ZDFHRMBA66;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Estensione_SiriUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Osvaldo.DaltonApp.Estensione-SiriUI";
