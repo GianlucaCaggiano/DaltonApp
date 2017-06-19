@@ -34,12 +34,31 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     //prepara la fotocamera
     func prepareCamera() {
         captureSession.sessionPreset = AVCaptureSessionPresetPhoto
-        
-        if let availableDevices = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .back).devices {
-            captureDevice = availableDevices.first
-            beginSession()
+        frontCamera = true
+        initCamera()
+    }
+    
+    //cambia camera
+    @IBAction func setCamera(_ sender: Any) {
+        initCamera()
+    }
+    
+    func initCamera() {
+        stopCaptureSession()
+        if (frontCamera == false) {
+            if let availableDevices = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .front).devices {
+                frontCamera = true;
+                captureDevice = availableDevices.first
+                beginSession()
+            }
         }
-        
+        else {
+            if let availableDevices = AVCaptureDeviceDiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: .back).devices {
+                frontCamera = false;
+                captureDevice = availableDevices.first
+                beginSession()
+            }
+        }
     }
     
     func beginSession () {
@@ -151,11 +170,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         }
     }
     
-    //imposta camera frontale
-    @IBAction func setCamera(_ sender: Any) {
-     
-        
-    }
 
     //blocca la rotazione dello schermo per la fotocamera
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
