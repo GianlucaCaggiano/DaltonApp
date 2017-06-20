@@ -11,8 +11,12 @@ import UIKit
 class PhotoViewController: UIViewController {
 
     var takenPhoto:UIImage?
+    let viewCont = ViewController()
+    
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,21 +27,16 @@ class PhotoViewController: UIViewController {
             imageView.contentMode = .scaleAspectFill
         }
         
-    
         // You can also manually set it through IB
         // selecting the UIImageView in the storyboard
         // and checking "User Interaction Enabled" checkbox
         // in the Attributes Inspector panel.
-
-        
     }
     
     
     
     @IBAction func goBack(_ sender: Any) {
-        
         self.dismiss(animated: true, completion: nil)
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +44,9 @@ class PhotoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+        @IBOutlet weak var lab: UILabel!
+
     
     // Restituire il colore del pixel che viene toccato
     func getPixelColorAtPoint(point:CGPoint, sourceView: UIView) -> UIColor{
@@ -60,7 +62,10 @@ class PhotoViewController: UIViewController {
                                     blue: CGFloat(pixel[2])/255.0,
                                     alpha: CGFloat(pixel[3])/255.0)
         pixel.deallocate(capacity: 4)
+        
+        lab.backgroundColor = color
         return color
+
     }
 
     
@@ -68,7 +73,10 @@ class PhotoViewController: UIViewController {
         let touch = touches.first!
         let location = touch.location(in: view.self)
         print(getPixelColorAtPoint(point: location, sourceView: imageView))
+        //viewCont.barra.backgroundColor = getPixelColorAtPoint(point: location, sourceView: imageView)
     }
+    
+    
 
     
     /*

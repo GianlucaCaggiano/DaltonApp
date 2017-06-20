@@ -13,13 +13,14 @@ import MobileCoreServices
 class ViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     @IBOutlet weak var cameraView: UIView!
+    @IBOutlet weak var barra: UIView!
+    @IBOutlet weak var flashImg: UIButton!
     
+    
+    
+    var captureDevice:AVCaptureDevice!
     let captureSession = AVCaptureSession()
     var previewLayer:CALayer!
-    
-    @IBOutlet weak var flashImg: UIButton!
-    var captureDevice:AVCaptureDevice!
-    
     var takePhoto = false
     var frontCamera: Bool = false
     var flashEnabled: Bool = false
@@ -159,7 +160,6 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         }
         
     }
-    @IBOutlet weak var barra: UIView!
     
     //attiva il flash alla fotocamera
     @IBAction func activeFlash(_ sender: Any) {

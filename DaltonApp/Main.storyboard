@@ -165,11 +165,19 @@
                                     <outletCollection property="gestureRecognizers" destination="9gY-O0-Blc" appends="YES" id="s2s-rO-xri"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWr-Wf-lV3">
+                                <rect key="frame" x="186" y="118" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="zgr-cf-bGh" id="R01-O8-shG"/>
+                        <outlet property="lab" destination="FWr-Wf-lV3" id="LEc-nJ-TBb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mc4-Nw-MFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
