@@ -23,15 +23,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtC-dz-4Ky">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="32" width="414" height="704"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Td-A8-zWK" userLabel="Fotocamera">
-                                <rect key="frame" x="182.33333333333334" y="674" width="50" height="50"/>
+                                <rect key="frame" x="176" y="661" width="63" height="63"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="8cf-Ll-CIK" userLabel="width = 63"/>
-                                    <constraint firstAttribute="height" constant="50" id="scs-EO-Ucz" userLabel="height = 63"/>
+                                    <constraint firstAttribute="width" constant="63" id="1Uj-7U-xbp"/>
+                                    <constraint firstAttribute="height" constant="63" id="9zY-3s-9M5"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="Fotocamera.png"/>
                                 <connections>
@@ -116,8 +116,8 @@
                             <constraint firstItem="fSy-DN-Xzc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="DgB-mt-220"/>
                             <constraint firstItem="twf-el-NiM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="16" id="Dmg-A0-8q7"/>
                             <constraint firstAttribute="trailing" secondItem="twf-el-NiM" secondAttribute="trailing" id="EL9-Sn-QRC"/>
-                            <constraint firstItem="gtC-dz-4Ky" firstAttribute="top" secondItem="twf-el-NiM" secondAttribute="bottom" id="IlH-Lt-PbZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fSy-DN-Xzc" secondAttribute="bottom" constant="13" id="QOK-sf-LbK"/>
+                            <constraint firstItem="gtC-dz-4Ky" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="12" id="WXe-O8-4XO"/>
                             <constraint firstItem="twf-el-NiM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Y9G-En-ExE"/>
                             <constraint firstItem="fSy-DN-Xzc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gFu-Zr-WT2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1Td-A8-zWK" secondAttribute="bottom" constant="12" id="hbM-oZ-Bkc"/>

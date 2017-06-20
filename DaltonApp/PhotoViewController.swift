@@ -20,7 +20,7 @@ class PhotoViewController: UIViewController {
 
         if let availableImage = takenPhoto {
             imageView.image = availableImage
-            imageView.contentMode = .scaleToFill
+            imageView.contentMode = .scaleAspectFill
         }
         
     
