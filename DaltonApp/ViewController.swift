@@ -8,9 +8,10 @@
 
 import UIKit
 import AVFoundation
+import MobileCoreServices
 
-class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
-
+class ViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVCaptureVideoDataOutputSampleBufferDelegate {
+    
     @IBOutlet weak var cameraView: UIView!
     
     let captureSession = AVCaptureSession()
@@ -158,6 +159,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         }
         
     }
+    @IBOutlet weak var barra: UIView!
     
     //attiva il flash alla fotocamera
     @IBAction func activeFlash(_ sender: Any) {
@@ -184,6 +186,33 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         }
     }
     
+    //Apre la galleria
+    @IBAction func ImageCameraRoll(_ sender: Any) {
+        self.stopCaptureSession()
+        
+        let ipc = UIImagePickerController()
+        ipc.sourceType = .photoLibrary
+        ipc.delegate = self
+        
+        present(ipc, animated: true, completion: nil)
+        
+    }
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let photoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PhotoVC") as! PhotoViewController
+        let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+        
+        
+        photoVC.takenPhoto = selectedImage
+        dismiss(animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.present(photoVC, animated: true, completion: {
+                self.stopCaptureSession()
+            })
+        }
+    }
+    
 
     //blocca la rotazione dello schermo per la fotocamera
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -198,7 +227,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
 }
 
