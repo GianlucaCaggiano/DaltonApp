@@ -37,7 +37,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     
     //prepara la fotocamera
     func prepareCamera() {
-        captureSession.sessionPreset = AVCaptureSessionPresetPhoto
+        captureSession.sessionPreset = AVCaptureSessionPreset1280x720
         frontCamera = true
         initCamera()
     }
