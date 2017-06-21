@@ -24,6 +24,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     var takePhoto = false
     var frontCamera: Bool = false
     var flashEnabled: Bool = false
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,7 +112,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     }
     
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
-        
+    
         if takePhoto {
             takePhoto = false
             

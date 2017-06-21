@@ -14,6 +14,7 @@ class PhotoViewController: UIViewController {
     let viewCont = ViewController()
     
     
+    @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     
     
@@ -24,7 +25,7 @@ class PhotoViewController: UIViewController {
 
         if let availableImage = takenPhoto {
             imageView.image = availableImage
-            imageView.contentMode = .scaleAspectFill
+            imageView.contentMode = .scaleToFill
         }
         
         // You can also manually set it through IB
@@ -43,9 +44,6 @@ class PhotoViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-        @IBOutlet weak var lab: UILabel!
 
     
     // Restituire il colore del pixel che viene toccato
@@ -63,7 +61,7 @@ class PhotoViewController: UIViewController {
                                     alpha: CGFloat(pixel[3])/255.0)
         pixel.deallocate(capacity: 4)
         
-        lab.backgroundColor = color
+        cameraView.backgroundColor = color
         return color
 
     }
