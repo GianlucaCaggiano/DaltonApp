@@ -69,7 +69,7 @@ class PhotoViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
-        let location = touch.location(in: view.self)
+        let location = touch.location(in: imageView.self)
         print(getPixelColorAtPoint(point: location, sourceView: imageView))
         //viewCont.barra.backgroundColor = getPixelColorAtPoint(point: location, sourceView: imageView)
     }
