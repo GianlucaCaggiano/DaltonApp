@@ -196,6 +196,14 @@
                                     <outletCollection property="gestureRecognizers" destination="9gY-O0-Blc" appends="YES" id="s2s-rO-xri"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5P-4w-yOO">
+                                <rect key="frame" x="182" y="377" width="51" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -211,6 +219,7 @@
                     <connections>
                         <outlet property="cameraView" destination="36y-cy-eqK" id="BNG-3y-Aar"/>
                         <outlet property="imageView" destination="zgr-cf-bGh" id="R01-O8-shG"/>
+                        <outlet property="label" destination="k5P-4w-yOO" id="OBu-d3-dwQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mc4-Nw-MFg" userLabel="First Responder" sceneMemberID="firstResponder"/>

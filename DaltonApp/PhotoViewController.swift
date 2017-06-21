@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController {
+class PhotoViewController: UIViewController  {
 
     var takenPhoto:UIImage?
     let viewCont = ViewController()
@@ -16,6 +16,7 @@ class PhotoViewController: UIViewController {
     
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var label: UILabel!
     
     
     
@@ -27,7 +28,7 @@ class PhotoViewController: UIViewController {
             imageView.image = availableImage
             imageView.contentMode = .scaleToFill
         }
-        
+        label.isHidden = true
         // You can also manually set it through IB
         // selecting the UIImageView in the storyboard
         // and checking "User Interaction Enabled" checkbox
@@ -62,20 +63,25 @@ class PhotoViewController: UIViewController {
         pixel.deallocate(capacity: 4)
         
         cameraView.backgroundColor = color
+        
         return color
 
     }
-
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
         let location = touch.location(in: imageView.self)
-        print(getPixelColorAtPoint(point: location, sourceView: imageView))
+            print(getPixelColorAtPoint(point: location, sourceView: imageView))
+        
+        let size = CGSize(width: 50, height: 50)
+        label.frame = CGRect(origin: location, size: size)
+        
+        
+        label.isHidden = false
+        
         //viewCont.barra.backgroundColor = getPixelColorAtPoint(point: location, sourceView: imageView)
     }
     
-    
-
     
     /*
     // MARK: - Navigation
