@@ -26,9 +26,26 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     var flashEnabled: Bool = false
 
     
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+         scheduledTimerWithTimeInterval() ////
     }
+    
+    func scheduledTimerWithTimeInterval(){
+        // Scheduling timer to Call the function **Countdown** with the interval of 1 seconds
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateFrame), userInfo: nil, repeats: true)
+    }
+    
+    ////
+    func updateFrame(){
+        //PIXEL CENTRALE
+        let point : CGPoint = CGPoint(x: UIScreen.main.bounds.size.width*0.5,y: UIScreen.main.bounds.size.height*0.5)
+        //FUNZIONE DA ESEGUIRE
+        print("ciao")
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
