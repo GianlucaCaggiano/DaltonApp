@@ -49,7 +49,7 @@ class PhotoViewController: UIViewController  {
 
     
     // Restituire il colore del pixel che viene toccato
-    func getPixelColorAtPoint(point:CGPoint, sourceView: UIView) -> UIColor{
+    func getPixelColorAtPoint(point:CGPoint, sourceView: UIView) {
         let pixel = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: 4)
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue)
@@ -64,9 +64,8 @@ class PhotoViewController: UIViewController  {
         pixel.deallocate(capacity: 4)
         
         cameraView.backgroundColor = color
-        print(color)
+        print(toHexString(color: color))
         colorFamily.text = whichColor(color: color)
-        return color
 
     }
     
@@ -135,6 +134,47 @@ class PhotoViewController: UIViewController  {
         
         //viewCont.barra.backgroundColor = getPixelColorAtPoint(point: location, sourceView: imageView)
     }
+    
+    /*
+    func toHex(alpha: Bool = false) -> String? {
+        guard let components = cgColor.components, components.count >= 3 else {
+            return nil
+        }
+        
+        let r = Float(components[0])
+        let g = Float(components[1])
+        let b = Float(components[2])
+        var a = Float(1.0)
+        
+        if components.count >= 4 {
+            a = Float(components[3])
+        }
+        
+        if alpha {
+            return String(format: "%02lX%02lX%02lX%02lX", lroundf(r * 255), lroundf(g * 255), lroundf(b * 255), lroundf(a * 255))
+        } else {
+            return String(format: "%02lX%02lX%02lX", lroundf(r * 255), lroundf(g * 255), lroundf(b * 255))
+        }
+    }
+ */
+    
+    
+    func toHexString(color: UIColor) -> String {
+        var r:CGFloat = 0
+        var g:CGFloat = 0
+        var b:CGFloat = 0
+        var a:CGFloat = 0
+        
+        //getRed()
+        color.getRed(&r, green: &g, blue: &b, alpha: &a)
+        
+        let rgb:Int = (Int)(r*255)<<16 | (Int)(g*255)<<8 | (Int)(b*255)<<0
+        
+        return NSString(format:"#%06x", rgb) as String
+    }
+ 
+    
+
     
     
     /*
