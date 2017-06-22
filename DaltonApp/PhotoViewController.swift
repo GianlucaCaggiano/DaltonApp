@@ -19,6 +19,7 @@ class PhotoViewController: UIViewController  {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var colorFamily: UILabel!
     
+    var size: CGFloat = 50
     
     
     override func viewDidLoad() {
@@ -126,8 +127,10 @@ class PhotoViewController: UIViewController  {
         let touch = touches.first!
         let location = touch.location(in: imageView.self)
         
-        let size = CGSize(width: 50, height: 50)
-        label.frame = CGRect(origin: location, size: size)
+                //let size = CGSize(width: 50, height: 50)
+        size = 50
+        label.frame = CGRect(x: location.x - (size / 2), y: location.y + (size / 2), width: size, height: size)
+        //label.frame = CGRect(origin: location, size: size)
         
         getPixelColorAtPoint(point: location, sourceView: imageView)
         label.isHidden = false
