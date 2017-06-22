@@ -25,13 +25,14 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     var takePhoto = false
     var frontCamera: Bool = false
     var flashEnabled: Bool = false
+    let context = CIContext()
 
     
     var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // scheduledTimerWithTimeInterval() ////
+         scheduledTimerWithTimeInterval() ////
     }
     
     func scheduledTimerWithTimeInterval(){
@@ -44,10 +45,42 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         //PIXEL CENTRALE
         let point : CGPoint = CGPoint(x: UIScreen.main.bounds.size.width*0.5,y: UIScreen.main.bounds.size.height*0.5)
         //FUNZIONE DA ESEGUIRE
-        print("ciao")
+        getPixelColorAtPoint(point: point, sourceView: cameraView)
+        
+    }
+    //////
+    
+    
+    private func imageFromSampleBuffer(sampleBuffer: CMSampleBuffer) -> UIImage? {
+        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return nil }
+        let ciImage = CIImage(cvPixelBuffer: imageBuffer)
+        guard let cgImage = context.createCGImage(ciImage, from: ciImage.extent) else { return nil }
+        return UIImage(cgImage: cgImage)
     }
     
+    func getPixelColorAtPoint(point:CGPoint, sourceView: UIView) {
+        let pixel = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: 4)
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue)
+        let context = CGContext(data: pixel, width: 1, height: 1, bitsPerComponent: 8, bytesPerRow: 4, space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
+        
+        context!.translateBy(x: -point.x, y: -point.y)
+        sourceView.layer.render(in: context!)
+        let color:UIColor = UIColor(red: CGFloat(pixel[0])/255.0,
+                                    green: CGFloat(pixel[1])/255.0,
+                                    blue: CGFloat(pixel[2])/255.0,
+                                    alpha: CGFloat(pixel[3])/255.0)
+        pixel.deallocate(capacity: 4)
+        
+        cameraView.backgroundColor = color
+        print(color)
+    //    hexLabel.text = toHexString(color: color)
+    //    colorLabel.text = whichColor(color: color)
+    }
+
     
+    
+    /////
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         prepareCamera()

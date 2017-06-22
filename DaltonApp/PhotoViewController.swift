@@ -14,6 +14,8 @@ class PhotoViewController: UIViewController  {
     let viewCont = ViewController()
     
     
+    @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var hexLabel: UILabel!
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
@@ -65,10 +67,10 @@ class PhotoViewController: UIViewController  {
         pixel.deallocate(capacity: 4)
         
         cameraView.backgroundColor = color
-        print(toHexString(color: color))
-        colorFamily.text = whichColor(color: color)
-
+        hexLabel.text = toHexString(color: color)
+        colorLabel.text = whichColor(color: color)
     }
+    
     
     func whichColor(color: UIColor) -> String{
         var (h,s,b,a) : (CGFloat, CGFloat, CGFloat, CGFloat) = (0,0,0,0)
@@ -114,15 +116,15 @@ class PhotoViewController: UIViewController  {
         case (0...1.00, 0...1.00, 0...0.07):
             colorTitle = "black"
         default:
-            colorTitle = "Color didn't fit defined ranges..."
+            colorTitle = " "
         }
         
         return colorTitle
     }
-
     
     
-    //appena inizia il tocco
+    
+    // inizia il tocco
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
         let location = touch.location(in: imageView.self)
@@ -159,6 +161,8 @@ class PhotoViewController: UIViewController  {
     }
  
     
+    @IBAction func save(_ sender: UIButton) {
+    }
 
     
     
