@@ -8,11 +8,13 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController  {
+class PhotoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
 
     var takenPhoto:UIImage?
     let viewCont = ViewController()
     
+    var imagePicker: UIImagePickerController!
+   
     
     @IBOutlet weak var colorLabel: UILabel!
     @IBOutlet weak var hexLabel: UILabel!
@@ -43,11 +45,6 @@ class PhotoViewController: UIViewController  {
     
     @IBAction func goBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     
@@ -162,9 +159,30 @@ class PhotoViewController: UIViewController  {
  
     
     @IBAction func save(_ sender: UIButton) {
+        
+        
+        UIImageWriteToSavedPhotosAlbum(imageView.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+
     }
 
+    func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Saved!", message: "Your image has been saved to your photos.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            dismiss(animated: true, completion: nil)
+        }
+    }
     
+    //MARK: - Done image capture here
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        imagePicker.dismiss(animated: true, completion: nil)
+        imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+    }
     
     /*
     // MARK: - Navigation
