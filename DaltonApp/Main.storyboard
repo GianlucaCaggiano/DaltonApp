@@ -178,10 +178,16 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEJ-VS-tPw">
-                                        <rect key="frame" x="8" y="9.6666666666666661" width="34" height="30"/>
+                                        <rect key="frame" x="8" y="10" width="34" height="30"/>
                                         <state key="normal" title="Back"/>
                                         <connections>
                                             <action selector="goBack:" destination="Igs-uC-hbY" eventType="touchUpInside" id="6qs-di-CsR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hbh-Qj-nil">
+                                        <rect key="frame" x="384" y="13.666666666666664" width="22" height="22"/>
+                                        <connections>
+                                            <action selector="save:" destination="Igs-uC-hbY" eventType="touchUpInside" id="Abp-13-tgP"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -191,6 +197,8 @@
                                     <constraint firstItem="fEJ-VS-tPw" firstAttribute="leading" secondItem="36y-cy-eqK" secondAttribute="leading" constant="8" id="cFu-ew-gS9"/>
                                     <constraint firstItem="fEJ-VS-tPw" firstAttribute="centerY" secondItem="36y-cy-eqK" secondAttribute="centerY" id="dkb-vR-uiV"/>
                                     <constraint firstAttribute="bottom" secondItem="aEJ-B0-7SV" secondAttribute="bottom" id="fBu-t9-uRW"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hbh-Qj-nil" secondAttribute="trailing" constant="8" id="ggA-Yg-JLQ"/>
+                                    <constraint firstItem="Hbh-Qj-nil" firstAttribute="centerY" secondItem="36y-cy-eqK" secondAttribute="centerY" id="uDo-Z5-7vp"/>
                                     <constraint firstAttribute="trailing" secondItem="aEJ-B0-7SV" secondAttribute="trailing" id="w6s-mJ-Jwl"/>
                                     <constraint firstItem="aEJ-B0-7SV" firstAttribute="top" secondItem="36y-cy-eqK" secondAttribute="top" id="wxJ-Zr-qDn"/>
                                 </constraints>
