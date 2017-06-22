@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -178,16 +178,25 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEJ-VS-tPw">
-                                        <rect key="frame" x="8" y="9.6666666666666661" width="34" height="30"/>
+                                        <rect key="frame" x="8" y="10" width="34" height="30"/>
                                         <state key="normal" title="Back"/>
                                         <connections>
                                             <action selector="goBack:" destination="Igs-uC-hbY" eventType="touchUpInside" id="6qs-di-CsR"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtE-eJ-5zB">
+                                        <rect key="frame" x="372" y="9.6666666666666661" width="34" height="30"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="save:" destination="Igs-uC-hbY" eventType="touchUpInside" id="ddb-Hw-Tra"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CtE-eJ-5zB" secondAttribute="trailing" constant="8" id="BSN-eX-U40"/>
                                     <constraint firstItem="aEJ-B0-7SV" firstAttribute="leading" secondItem="36y-cy-eqK" secondAttribute="leading" id="KhC-AZ-5Bv"/>
+                                    <constraint firstItem="CtE-eJ-5zB" firstAttribute="centerY" secondItem="36y-cy-eqK" secondAttribute="centerY" id="ayc-pO-3ge"/>
                                     <constraint firstItem="fEJ-VS-tPw" firstAttribute="leading" secondItem="36y-cy-eqK" secondAttribute="leading" constant="8" id="cFu-ew-gS9"/>
                                     <constraint firstItem="fEJ-VS-tPw" firstAttribute="centerY" secondItem="36y-cy-eqK" secondAttribute="centerY" id="dkb-vR-uiV"/>
                                     <constraint firstAttribute="bottom" secondItem="aEJ-B0-7SV" secondAttribute="bottom" id="fBu-t9-uRW"/>
@@ -227,6 +236,8 @@
                     <connections>
                         <outlet property="cameraView" destination="36y-cy-eqK" id="BNG-3y-Aar"/>
                         <outlet property="colorFamily" destination="ET9-tx-oG7" id="n2W-lP-6yO"/>
+                        <outlet property="colorLabel" destination="ieI-BL-b3h" id="Klt-2a-3MY"/>
+                        <outlet property="hexLabel" destination="ET9-tx-oG7" id="N8N-AD-jLu"/>
                         <outlet property="imageView" destination="zgr-cf-bGh" id="R01-O8-shG"/>
                         <outlet property="label" destination="k5P-4w-yOO" id="OBu-d3-dwQ"/>
                     </connections>
