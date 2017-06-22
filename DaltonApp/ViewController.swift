@@ -15,8 +15,9 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var barra: UIView!
     @IBOutlet weak var flashImg: UIButton!
+    @IBOutlet weak var label: UILabel!
     
-    
+    var size: CGFloat = 50
     
     var captureDevice:AVCaptureDevice!
     let captureSession = AVCaptureSession()
@@ -50,6 +51,17 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         prepareCamera()
+        size = 50
+        label.frame = CGRect(x: view.center.x - (size / 2), y: view.center.y - (size / 2), width: size, height: size)
+        
+        label.layer.borderColor = UIColor.black.cgColor
+        label.layer.borderWidth = 4
+        label.layer.cornerRadius = label.frame.size.width / 2
+        label.layer.backgroundColor = UIColor(white: 1, alpha: 0.5).cgColor
+        
+        label.isHidden = false
+        
+
     }
     
     //prepara la fotocamera

@@ -127,15 +127,21 @@ class PhotoViewController: UIViewController  {
         let touch = touches.first!
         let location = touch.location(in: imageView.self)
         
-                //let size = CGSize(width: 50, height: 50)
+        //let size = CGSize(width: 50, height: 50)
         size = 50
         label.frame = CGRect(x: location.x - (size / 2), y: location.y + (size / 2), width: size, height: size)
         //label.frame = CGRect(origin: location, size: size)
+        
+        label.layer.borderColor = UIColor.black.cgColor
+        label.layer.borderWidth = 4
+        label.layer.cornerRadius = label.frame.size.width / 2
+        label.layer.backgroundColor = UIColor(white: 1, alpha: 0.5).cgColor
         
         getPixelColorAtPoint(point: location, sourceView: imageView)
         label.isHidden = false
         
     }
+
     
     
     func toHexString(color: UIColor) -> String {
