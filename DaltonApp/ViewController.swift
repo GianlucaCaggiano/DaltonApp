@@ -30,7 +30,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         scheduledTimerWithTimeInterval() ////
+        // scheduledTimerWithTimeInterval() ////
     }
     
     func scheduledTimerWithTimeInterval(){
