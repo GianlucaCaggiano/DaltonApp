@@ -18,7 +18,6 @@
 		33FE046C1EF7CB35009436ED /* icons8-Flash On-50 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 33FE04681EF7CB35009436ED /* icons8-Flash On-50 (1).png */; };
 		33FE046E1EF7CB47009436ED /* Fotocamera.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FE046D1EF7CB47009436ED /* Fotocamera.png */; };
 		58ED346F1EF9411E0002EA31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58ED346E1EF9411E0002EA31 /* Main.storyboard */; };
-		58ED34771EFBFA420002EA31 /* FrameExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED34761EFBFA420002EA31 /* FrameExtractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,7 +54,6 @@
 		33FE04681EF7CB35009436ED /* icons8-Flash On-50 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-Flash On-50 (1).png"; sourceTree = "<group>"; };
 		33FE046D1EF7CB47009436ED /* Fotocamera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fotocamera.png; sourceTree = "<group>"; };
 		58ED346E1EF9411E0002EA31 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		58ED34761EFBFA420002EA31 /* FrameExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameExtractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +129,6 @@
 				33FE04681EF7CB35009436ED /* icons8-Flash On-50 (1).png */,
 				33FE046D1EF7CB47009436ED /* Fotocamera.png */,
 				58ED346E1EF9411E0002EA31 /* Main.storyboard */,
-				58ED34761EFBFA420002EA31 /* FrameExtractor.swift */,
 			);
 			path = DaltonApp;
 			sourceTree = "<group>";
@@ -222,7 +219,6 @@
 			files = (
 				33FE04641EF7CB03009436ED /* ViewController.swift in Sources */,
 				33FE044E1EF7CA6E009436ED /* AppDelegate.swift in Sources */,
-				58ED34771EFBFA420002EA31 /* FrameExtractor.swift in Sources */,
 				33FE04621EF7CADD009436ED /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
