@@ -64,6 +64,20 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
                                     alpha: CGFloat(pixel[3])/255.0)
         pixel.deallocate(capacity: 4)
         
+        //calcola colore label
+        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+        color.getRed(&r, green: &g, blue: &b, alpha: &a)
+        let rgb:Int = (Int)(r*255)<<16 | (Int)(g*255)<<8 | (Int)(b*255)<<0
+        if(rgb < 8421504)
+        {
+            hexLabel.textColor = UIColor.white
+            colorLabel.textColor = UIColor.white
+        }
+        else{
+            hexLabel.textColor = UIColor.black
+            colorLabel.textColor = UIColor.black
+        }
+
         cameraView.backgroundColor = color
         hexLabel.text = toHexString(color: color)
         colorLabel.text = whichColor(color: color)
