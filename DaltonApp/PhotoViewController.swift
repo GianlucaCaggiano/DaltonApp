@@ -115,7 +115,6 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         default:
             colorTitle = " "
         }
-        
         return colorTitle
     }
     

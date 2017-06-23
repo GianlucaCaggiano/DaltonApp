@@ -169,7 +169,7 @@
 				TargetAttributes = {
 					33FE04491EF7CA6E009436ED = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 3SS4E263ES;
+						DevelopmentTeam = K8WJKQA676;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Siri = {
@@ -347,10 +347,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3SS4E263ES;
+				DEVELOPMENT_TEAM = K8WJKQA676;
 				INFOPLIST_FILE = DaltonApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GennaroFranzese.DaltonApp;
+				PRODUCT_BUNDLE_IDENTIFIER = FrancescoPerrino.DaltonApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -361,10 +361,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3SS4E263ES;
+				DEVELOPMENT_TEAM = K8WJKQA676;
 				INFOPLIST_FILE = DaltonApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GennaroFranzese.DaltonApp;
+				PRODUCT_BUNDLE_IDENTIFIER = FrancescoPerrino.DaltonApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
