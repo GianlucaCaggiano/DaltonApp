@@ -46,7 +46,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     ////
     func updateFrame(){
         //PIXEL CENTRALE
-        let point : CGPoint = CGPoint(x: view.center.x - (size / 2), y: view.center.y - (size / 2 + 30))
+        let point : CGPoint = CGPoint(x: view.center.x - (size / 2 - 20), y: view.center.y - (size / 2 + 50))
         //FUNZIONE DA ESEGUIRE
         getPixelColorAtPoint(point: point, sourceView: imageView)
         
@@ -87,7 +87,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         super.viewWillAppear(animated)
         prepareCamera()
         size = 50
-        label.frame = CGRect(x: view.center.x - (size / 2), y: view.center.y - (size / 2 - 20) , width: size, height: size)
+        label.frame = CGRect(x: view.center.x - (size / 2), y: view.center.y - (size / 2) , width: size, height: size)
         
         label.layer.borderColor = UIColor.black.cgColor
         label.layer.borderWidth = 4
