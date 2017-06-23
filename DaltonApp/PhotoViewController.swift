@@ -23,6 +23,7 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var colorFamily: UILabel!
     
+    
     var size: CGFloat = 50
     
     

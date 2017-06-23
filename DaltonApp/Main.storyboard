@@ -141,7 +141,9 @@
                     <connections>
                         <outlet property="barra" destination="twf-el-NiM" id="m3W-hz-54A"/>
                         <outlet property="cameraView" destination="gtC-dz-4Ky" id="0dQ-Vr-5eu"/>
+                        <outlet property="colorLabel" destination="FhN-xw-tKi" id="1aw-Ec-doN"/>
                         <outlet property="flashImg" destination="VH5-XQ-yKy" id="zoG-if-gTC"/>
+                        <outlet property="hexLabel" destination="n8c-KV-m7W" id="6kZ-NB-Iiw"/>
                         <outlet property="imageView" destination="RfM-tI-Jzb" id="BZz-6i-LSz"/>
                         <outlet property="label" destination="zE6-cc-KsM" id="2RL-dF-SV9"/>
                     </connections>
