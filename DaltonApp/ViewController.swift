@@ -57,7 +57,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         let point : CGPoint = CGPoint(x: view.center.x - (size / 2 - 20), y: view.center.y - (size / 2 + 50 ))
         //FUNZIONE DA ESEGUIRE
         getPixelColorAtPoint(point: point, sourceView: imageView)
-)
+
     }
     //////
     
@@ -118,52 +118,18 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     }
 
     func whichColor(color: UIColor) -> String{
-        var (h,s,b,a) : (CGFloat, CGFloat, CGFloat, CGFloat) = (0,0,0,0)
-        _ = color.getHue(&h, saturation: &s, brightness: &b, alpha: &a)
         
-        // print("HSB range- h: \(h), s: \(s), v: \(b)")
+        let colori = toHexString(color: color)
+        var nome: String = "Bello"
         
-        var colorTitle = ""
-        
-        switch (h, s, b) {
-            
-        // red
-        case (0...0.138, 0.88...1.00, 0.75...1.00):
-            colorTitle = "red"
-        // yellow
-        case (0.139...0.175, 0.30...1.00, 0.80...1.00):
-            colorTitle = "yellow"
-        // green
-        case (0.176...0.422, 0.30...1.00, 0.60...1.00):
-            colorTitle = "green"
-        // teal
-        case (0.423...0.494, 0.30...1.00, 0.54...1.00):
-            colorTitle = "teal"
-        // blue
-        case (0.495...0.667, 0.30...1.00, 0.60...1.00):
-            colorTitle = "blue"
-        // purple
-        case (0.668...0.792, 0.30...1.00, 0.40...1.00):
-            colorTitle = "purple"
-        // pink
-        case (0.793...0.977, 0.30...1.00, 0.80...1.00):
-            colorTitle = "pink"
-        // brown
-        case (0...0.097, 0.50...1.00, 0.25...0.58):
-            colorTitle = "brown"
-        // white
-        case (0...1.00, 0...0.05, 0.95...1.00):
-            colorTitle = "white"
-        // grey
-        case (0...1.00, 0, 0.25...0.94):
-            colorTitle = "grey"
-        // black
-        case (0...1.00, 0...1.00, 0...0.07):
-            colorTitle = "black"
-        default:
-            colorTitle = " "
+        if let functionFullname = self.jsContext.objectForKeyedSubscript("nomi") {
+            // Call the function that composes the fullname.
+            if let fullname = functionFullname.call(withArguments: [colori]) {
+                nome=fullname.toString()
+
+            }
         }
-        return colorTitle
+        return nome
     }
 
     
@@ -399,15 +365,12 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     
     }
     
-    func jsDemo1(color: String) {
-      
-        if let functionFullname = self.jsContext.objectForKeyedSubscript("nomi") {
-            // Call the function that composes the fullname.
-            if let fullname = functionFullname.call(withArguments: [color]) {
-                print(fullname.toString())
-            }
-        }
+    
+    
     }
-}
+
+
+
+
 
 
