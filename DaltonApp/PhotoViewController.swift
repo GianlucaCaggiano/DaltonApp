@@ -113,6 +113,7 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         
         //let size = CGSize(width: 50, height: 50)
         size = 50
+        if(location.y > 20){
         label.frame = CGRect(x: location.x - (size / 2), y: location.y + (size / 2), width: size, height: size)
         //label.frame = CGRect(origin: location, size: size)
         
@@ -123,7 +124,7 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         
         getPixelColorAtPoint(point: location, sourceView: imageView)
         label.isHidden = false
-        
+        }
     }
     
     
