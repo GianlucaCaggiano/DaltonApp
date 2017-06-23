@@ -57,7 +57,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         let point : CGPoint = CGPoint(x: view.center.x - (size / 2 - 20), y: view.center.y - (size / 2 + 50 ))
         //FUNZIONE DA ESEGUIRE
         getPixelColorAtPoint(point: point, sourceView: imageView)
-        jsDemo1()
+)
     }
     //////
     
@@ -399,16 +399,14 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     
     }
     
-    func jsDemo1() {
-    let color = "#6195ED"
-        if let functionFullname = self.jsContext.objectForKeyedSubscript("ntc.name") {
+    func jsDemo1(color: String) {
+      
+        if let functionFullname = self.jsContext.objectForKeyedSubscript("nomi") {
             // Call the function that composes the fullname.
-            if let fullname = functionFullname.call(withArguments: [color]){
+            if let fullname = functionFullname.call(withArguments: [color]) {
                 print(fullname.toString())
             }
-        
-            }
-    
+        }
     }
 }
 
