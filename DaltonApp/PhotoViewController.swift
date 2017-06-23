@@ -10,12 +10,12 @@ import UIKit
 import JavaScriptCore
 
 class PhotoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
-
+    
     var takenPhoto:UIImage?
     let viewCont = ViewController()
     
     var imagePicker: UIImagePickerController!
-   
+    
     
     @IBOutlet weak var colorLabel: UILabel!
     @IBOutlet weak var hexLabel: UILabel!
@@ -23,17 +23,17 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var colorFamily: UILabel!
-
+    
     
     var size: CGFloat = 50
     var jsContext: JSContext!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imageView.isUserInteractionEnabled = true
         self.initializeJS()
-
+        
         if let availableImage = takenPhoto {
             imageView.image = availableImage
             imageView.contentMode = .scaleToFill
@@ -50,7 +50,7 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
     @IBAction func goBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
     
     // Restituire il colore del pixel che viene toccato
     func getPixelColorAtPoint(point:CGPoint, sourceView: UIView) {
@@ -80,7 +80,7 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
             hexLabel.textColor = UIColor.black
             colorLabel.textColor = UIColor.black
         }
-
+        
         cameraView.backgroundColor = color
         hexLabel.text = toHexString(color: color)
         colorLabel.text = whichColor(color: color)
@@ -101,7 +101,7 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         }
         return nome
     }
-
+    
     
     
     
@@ -125,7 +125,7 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         label.isHidden = false
         
     }
-
+    
     
     
     func toHexString(color: UIColor) -> String {
@@ -141,15 +141,15 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         
         return NSString(format:"#%06x", rgb) as String
     }
- 
+    
     
     @IBAction func save(_ sender: UIButton) {
         
         
         UIImageWriteToSavedPhotosAlbum(imageView.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
-
+        
     }
-
+    
     func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
             // we got back an error!
@@ -185,15 +185,15 @@ class PhotoViewController: UIViewController, UINavigationControllerDelegate, UII
         }
         
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

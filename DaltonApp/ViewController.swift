@@ -23,9 +23,9 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     @IBOutlet weak var colorLabel: UILabel!
     
     var photoViewCont: PhotoViewController!
-
+    
     var jsContext: JSContext!
-
+    
     var size: CGFloat = 50
     
     var captureDevice:AVCaptureDevice!
@@ -35,15 +35,15 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     var frontCamera: Bool = false
     var flashEnabled: Bool = false
     let context = CIContext()
-
+    
     
     var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         scheduledTimerWithTimeInterval() ////
+        scheduledTimerWithTimeInterval() ////
         self.initializeJS()
-
+        
     }
     
     func scheduledTimerWithTimeInterval(){
@@ -57,7 +57,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         let point : CGPoint = CGPoint(x: view.center.x - (size / 2 - 20), y: view.center.y - (size / 2 + 50 ))
         //FUNZIONE DA ESEGUIRE
         getPixelColorAtPoint(point: point, sourceView: imageView)
-
+        
     }
     //////
     
@@ -102,7 +102,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         hexLabel.text = toHexString(color: color)
         colorLabel.text = whichColor(color: color)
     }
-
+    
     func toHexString(color: UIColor) -> String {
         var r:CGFloat = 0
         var g:CGFloat = 0
@@ -116,7 +116,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         
         return NSString(format:"#%06x", rgb) as String
     }
-
+    
     func whichColor(color: UIColor) -> String{
         
         let colori = toHexString(color: color)
@@ -126,12 +126,12 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
             // Call the function that composes the fullname.
             if let fullname = functionFullname.call(withArguments: [colori]) {
                 nome=fullname.toString()
-
+                
             }
         }
         return nome
     }
-
+    
     
     
     /////
@@ -148,7 +148,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         
         label.isHidden = false
         
-
+        
     }
     
     //prepara la fotocamera
@@ -209,18 +209,18 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
             if captureSession.canAddOutput(dataOutput) {
                 captureSession.addOutput(dataOutput)
             }
-
+            
             captureSession.commitConfiguration()
-
-
+            
+            
             let queue = DispatchQueue(label: "com.brianadvent.captureQueue")
             dataOutput.setSampleBufferDelegate(self, queue: queue)
-
-
+            
+            
         }
-
+        
     }
-
+    
     //fa la foto
     @IBAction func takePhoto(_ sender: Any) {
         takePhoto = true
@@ -238,7 +238,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
                 photoVC.takenPhoto = image
                 
                 DispatchQueue.main.async {
-                    self.present(photoVC, animated: true, completion: { 
+                    self.present(photoVC, animated: true, completion: {
                         self.stopCaptureSession()
                     })
                 }
@@ -249,7 +249,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
                 imageView.image = image
             }
         }
-
+        
     }
     
     
@@ -331,7 +331,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         }
     }
     
-
+    
     //blocca la rotazione dello schermo per la fotocamera
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.portrait
@@ -349,7 +349,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     
     func initializeJS() {
         self.jsContext = JSContext()
-
+        
         if let jsSourcePath = Bundle.main.path(forResource: "ntc", ofType: "js") {
             do {
                 // Load its contents to a String variable.
@@ -362,12 +362,12 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
                 print(error.localizedDescription)
             }
         }
-    
+        
     }
     
     
     
-    }
+}
 
 
 
