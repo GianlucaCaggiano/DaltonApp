@@ -22,6 +22,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RfM-tI-Jzb">
+                                <rect key="frame" x="0.0" y="68" width="414" height="668"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtC-dz-4Ky">
                                 <rect key="frame" x="0.0" y="32" width="414" height="704"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -138,12 +142,13 @@
                         <outlet property="barra" destination="twf-el-NiM" id="m3W-hz-54A"/>
                         <outlet property="cameraView" destination="gtC-dz-4Ky" id="0dQ-Vr-5eu"/>
                         <outlet property="flashImg" destination="VH5-XQ-yKy" id="zoG-if-gTC"/>
+                        <outlet property="imageView" destination="RfM-tI-Jzb" id="BZz-6i-LSz"/>
                         <outlet property="label" destination="zE6-cc-KsM" id="2RL-dF-SV9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018.840579710145" y="184.23913043478262"/>
+            <point key="canvasLocation" x="1102.8985507246377" y="189.94565217391306"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="TQf-9J-SRI">
