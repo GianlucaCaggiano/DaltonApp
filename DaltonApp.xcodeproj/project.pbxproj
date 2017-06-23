@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C75A8501EFD325C00BD8948 /* ntc.js in Resources */ = {isa = PBXBuildFile; fileRef = 2C75A84F1EFD325C00BD8948 /* ntc.js */; };
+		2C75A8521EFD335800BD8948 /* papaparse.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 2C75A8511EFD335800BD8948 /* papaparse.min.js */; };
 		33FE044E1EF7CA6E009436ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE044D1EF7CA6E009436ED /* AppDelegate.swift */; };
 		33FE04551EF7CA6E009436ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33FE04541EF7CA6E009436ED /* Assets.xcassets */; };
 		33FE04581EF7CA6E009436ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33FE04561EF7CA6E009436ED /* LaunchScreen.storyboard */; };
@@ -41,6 +43,8 @@
 		1A8244E41EF8238A00EE8A50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		1A8244E61EF8238A00EE8A50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1ACD3FCB1EF81FB400AC5B17 /* DaltonApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DaltonApp.entitlements; sourceTree = "<group>"; };
+		2C75A84F1EFD325C00BD8948 /* ntc.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ntc.js; sourceTree = "<group>"; };
+		2C75A8511EFD335800BD8948 /* papaparse.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = papaparse.min.js; sourceTree = "<group>"; };
 		33FE044A1EF7CA6E009436ED /* DaltonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaltonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FE044D1EF7CA6E009436ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33FE04541EF7CA6E009436ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				33FE04681EF7CB35009436ED /* icons8-Flash On-50 (1).png */,
 				33FE046D1EF7CB47009436ED /* Fotocamera.png */,
 				58ED346E1EF9411E0002EA31 /* Main.storyboard */,
+				2C75A84F1EFD325C00BD8948 /* ntc.js */,
+				2C75A8511EFD335800BD8948 /* papaparse.min.js */,
 			);
 			path = DaltonApp;
 			sourceTree = "<group>";
@@ -166,7 +172,7 @@
 				TargetAttributes = {
 					33FE04491EF7CA6E009436ED = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = UUYSG2MZB3;
+						DevelopmentTeam = 3SS4E263ES;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Siri = {
@@ -201,12 +207,14 @@
 			files = (
 				33FE046B1EF7CB35009436ED /* icons8-Flash Off-50 (1).png in Resources */,
 				33FE04581EF7CA6E009436ED /* LaunchScreen.storyboard in Resources */,
+				2C75A8521EFD335800BD8948 /* papaparse.min.js in Resources */,
 				33FE046E1EF7CB47009436ED /* Fotocamera.png in Resources */,
 				58ED346F1EF9411E0002EA31 /* Main.storyboard in Resources */,
 				33FE04551EF7CA6E009436ED /* Assets.xcassets in Resources */,
 				33FE046A1EF7CB35009436ED /* galleria.png in Resources */,
 				33FE04691EF7CB35009436ED /* frontale.png in Resources */,
 				33FE046C1EF7CB35009436ED /* icons8-Flash On-50 (1).png in Resources */,
+				2C75A8501EFD325C00BD8948 /* ntc.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,10 +351,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UUYSG2MZB3;
+				DEVELOPMENT_TEAM = 3SS4E263ES;
 				INFOPLIST_FILE = DaltonApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GianlucaCaggiano.DaltonApp;
+				PRODUCT_BUNDLE_IDENTIFIER = GennaroFranzese.DaltonApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -357,10 +365,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UUYSG2MZB3;
+				DEVELOPMENT_TEAM = 3SS4E263ES;
 				INFOPLIST_FILE = DaltonApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GianlucaCaggiano.DaltonApp;
+				PRODUCT_BUNDLE_IDENTIFIER = GennaroFranzese.DaltonApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

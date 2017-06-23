@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import MobileCoreServices
+import JavaScriptCore
 
 class ViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVCaptureVideoDataOutputSampleBufferDelegate {
     
@@ -23,7 +24,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     
     var photoViewCont: PhotoViewController!
 
-    
+    var jsContext: JSContext!
+
     var size: CGFloat = 50
     
     var captureDevice:AVCaptureDevice!
@@ -40,6 +42,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     override func viewDidLoad() {
         super.viewDidLoad()
          scheduledTimerWithTimeInterval() ////
+        self.initializeJS()
+
     }
     
     func scheduledTimerWithTimeInterval(){
@@ -53,7 +57,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         let point : CGPoint = CGPoint(x: view.center.x - (size / 2 - 20), y: view.center.y - (size / 2 + 50 ))
         //FUNZIONE DA ESEGUIRE
         getPixelColorAtPoint(point: point, sourceView: imageView)
-        
+        jsDemo1()
     }
     //////
     
@@ -376,5 +380,36 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func initializeJS() {
+        self.jsContext = JSContext()
+
+        if let jsSourcePath = Bundle.main.path(forResource: "ntc", ofType: "js") {
+            do {
+                // Load its contents to a String variable.
+                let jsSourceContents = try String(contentsOfFile: jsSourcePath)
+                
+                // Add the Javascript code that currently exists in the jsSourceContents to the Javascript Runtime through the jsContext object.
+                self.jsContext.evaluateScript(jsSourceContents)
+            }
+            catch {
+                print(error.localizedDescription)
+            }
+        }
+    
+    }
+    
+    func jsDemo1() {
+    let color = "#6195ED"
+        if let functionFullname = self.jsContext.objectForKeyedSubscript("ntc.name") {
+            // Call the function that composes the fullname.
+            if let fullname = functionFullname.call(withArguments: [color]){
+                print(fullname.toString())
+            }
+        
+            }
+    
+    }
 }
+
 
