@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2C75A8501EFD325C00BD8948 /* ntc.js in Resources */ = {isa = PBXBuildFile; fileRef = 2C75A84F1EFD325C00BD8948 /* ntc.js */; };
 		2C75A8521EFD335800BD8948 /* papaparse.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 2C75A8511EFD335800BD8948 /* papaparse.min.js */; };
+		3362EC3F1F0021CC00CE7D20 /* icons8-Back Filled-50-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3362EC3D1F0021CC00CE7D20 /* icons8-Back Filled-50-2.png */; };
+		3362EC401F0021CC00CE7D20 /* icons8-Back Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3362EC3E1F0021CC00CE7D20 /* icons8-Back Filled-50.png */; };
+		3362EC431F00221500CE7D20 /* icons8-Import Filled-50-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3362EC411F00221500CE7D20 /* icons8-Import Filled-50-2.png */; };
+		3362EC441F00221500CE7D20 /* icons8-Import Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3362EC421F00221500CE7D20 /* icons8-Import Filled-50.png */; };
 		33FE044E1EF7CA6E009436ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE044D1EF7CA6E009436ED /* AppDelegate.swift */; };
 		33FE04551EF7CA6E009436ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33FE04541EF7CA6E009436ED /* Assets.xcassets */; };
 		33FE04581EF7CA6E009436ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33FE04561EF7CA6E009436ED /* LaunchScreen.storyboard */; };
@@ -45,6 +49,10 @@
 		1ACD3FCB1EF81FB400AC5B17 /* DaltonApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DaltonApp.entitlements; sourceTree = "<group>"; };
 		2C75A84F1EFD325C00BD8948 /* ntc.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ntc.js; sourceTree = "<group>"; };
 		2C75A8511EFD335800BD8948 /* papaparse.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = papaparse.min.js; sourceTree = "<group>"; };
+		3362EC3D1F0021CC00CE7D20 /* icons8-Back Filled-50-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-Back Filled-50-2.png"; sourceTree = "<group>"; };
+		3362EC3E1F0021CC00CE7D20 /* icons8-Back Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-Back Filled-50.png"; sourceTree = "<group>"; };
+		3362EC411F00221500CE7D20 /* icons8-Import Filled-50-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-Import Filled-50-2.png"; sourceTree = "<group>"; };
+		3362EC421F00221500CE7D20 /* icons8-Import Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-Import Filled-50.png"; sourceTree = "<group>"; };
 		33FE044A1EF7CA6E009436ED /* DaltonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaltonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FE044D1EF7CA6E009436ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33FE04541EF7CA6E009436ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,6 +141,10 @@
 				33FE04681EF7CB35009436ED /* icons8-Flash On-50 (1).png */,
 				33FE046D1EF7CB47009436ED /* Fotocamera.png */,
 				58ED346E1EF9411E0002EA31 /* Main.storyboard */,
+				3362EC3D1F0021CC00CE7D20 /* icons8-Back Filled-50-2.png */,
+				3362EC411F00221500CE7D20 /* icons8-Import Filled-50-2.png */,
+				3362EC421F00221500CE7D20 /* icons8-Import Filled-50.png */,
+				3362EC3E1F0021CC00CE7D20 /* icons8-Back Filled-50.png */,
 				2C75A84F1EFD325C00BD8948 /* ntc.js */,
 				2C75A8511EFD335800BD8948 /* papaparse.min.js */,
 			);
@@ -208,12 +220,16 @@
 				33FE046B1EF7CB35009436ED /* icons8-Flash Off-50 (1).png in Resources */,
 				33FE04581EF7CA6E009436ED /* LaunchScreen.storyboard in Resources */,
 				2C75A8521EFD335800BD8948 /* papaparse.min.js in Resources */,
+				3362EC3F1F0021CC00CE7D20 /* icons8-Back Filled-50-2.png in Resources */,
+				3362EC401F0021CC00CE7D20 /* icons8-Back Filled-50.png in Resources */,
 				33FE046E1EF7CB47009436ED /* Fotocamera.png in Resources */,
+				3362EC441F00221500CE7D20 /* icons8-Import Filled-50.png in Resources */,
 				58ED346F1EF9411E0002EA31 /* Main.storyboard in Resources */,
 				33FE04551EF7CA6E009436ED /* Assets.xcassets in Resources */,
 				33FE046A1EF7CB35009436ED /* galleria.png in Resources */,
 				33FE04691EF7CB35009436ED /* frontale.png in Resources */,
 				33FE046C1EF7CB35009436ED /* icons8-Flash On-50 (1).png in Resources */,
+				3362EC431F00221500CE7D20 /* icons8-Import Filled-50-2.png in Resources */,
 				2C75A8501EFD325C00BD8948 /* ntc.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

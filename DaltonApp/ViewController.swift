@@ -100,6 +100,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         }
         
         hexLabel.text = toHexString(color: color)
+        //hexLabel.text = principalColor(color: color)
         colorLabel.text = whichColor(color: color)
     }
     
@@ -132,7 +133,88 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         return nome
     }
     
-    
+    func principalColor(color: UIColor) -> String{
+        
+        var (h,s,b,a) : (CGFloat, CGFloat, CGFloat, CGFloat) = (0,0,0,0)
+        _ = color.getHue(&h, saturation: &s, brightness: &b, alpha: &a)
+        
+        //print("HSB range- h: \(h), s: \(s), v: \(b)")
+        
+        var colorTitle = " "
+        
+        switch (h, s, b) {
+            
+        // red
+        case (0...0.138, 0.88...1.00, 0.75...1.00):
+            colorTitle = "Red"
+        // yellow
+        case (0.139...0.175, 0.30...1.00, 0.80...1.00):
+            colorTitle = "Yellow"
+        // green
+        case (0.176...0.422, 0.30...1.00, 0.60...1.00):
+            colorTitle = "Green"
+        // teal
+        case (0.423...0.494, 0.30...1.00, 0.54...1.00):
+            colorTitle = "Teal"
+        // blue
+        case (0.495...0.667, 0.30...1.00, 0.60...1.00):
+            colorTitle = "Blue"
+        // purple
+        case (0.668...0.792, 0.30...1.00, 0.40...1.00):
+            colorTitle = "Purple"
+        // pink
+        case (0.793...0.977, 0.30...1.00, 0.80...1.00):
+            colorTitle = "Pink"
+        // brown
+        case (0...0.097, 0.50...1.00, 0.25...0.58):
+            colorTitle = "Brown"
+        // white
+        case (0...1.00, 0...0.05, 0.95...1.00):
+            colorTitle = "White"
+        // grey
+        case (0...1.00, 0, 0.25...0.94):
+            colorTitle = "Grey"
+        // black
+        case (0...1.00, 0...1.00, 0...0.07):
+            colorTitle = "Black"
+        default:
+            if whichColor(color: color).lowercased().range(of:"red") != nil {
+                colorTitle = "Red"
+            }
+            if whichColor(color: color).lowercased().range(of:"yellow") != nil {
+                colorTitle = "Yellow"
+            }
+            if whichColor(color: color).lowercased().range(of:"green") != nil {
+                colorTitle = "Green"
+            }
+            if whichColor(color: color).lowercased().range(of:"teal") != nil {
+                colorTitle = "Teal"
+            }
+            if whichColor(color: color).lowercased().range(of:"blue") != nil {
+                colorTitle = "Blue"
+            }
+            if whichColor(color: color).lowercased().range(of:"purple") != nil {
+                colorTitle = "Purple"
+            }
+            if whichColor(color: color).lowercased().range(of:"pink") != nil {
+                colorTitle = "Pink"
+            }
+            if whichColor(color: color).lowercased().range(of:"brown") != nil {
+                colorTitle = "Brown"
+            }
+            if whichColor(color: color).lowercased().range(of:"white") != nil {
+                colorTitle = "White"
+            }
+            if whichColor(color: color).lowercased().range(of:"grey") != nil {
+                colorTitle = "Grey"
+            }
+            if whichColor(color: color).lowercased().range(of:"black") != nil {
+                colorTitle = "Black"
+            }
+        }
+        
+        return colorTitle
+    }
     
     /////
     override func viewWillAppear(_ animated: Bool) {
