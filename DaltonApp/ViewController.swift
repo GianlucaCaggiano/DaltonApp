@@ -36,7 +36,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     var flashEnabled: Bool = false
     let context = CIContext()
     
-    
+    var cambio = false
     var timer = Timer()
     
     override func viewDidLoad() {
@@ -54,9 +54,19 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     ////
     func updateFrame(){
         //PIXEL CENTRALE
-        let point : CGPoint = CGPoint(x: view.center.x - (size / 2 - 20), y: view.center.y - (size / 2 + 50 ))
+        
+        if(cambio)
+        {
+            let point : CGPoint = CGPoint(x: view.center.x - (size / 2 - 70), y: view.center.y - (size / 2 - 15 ))
+            getPixelColorAtPoint(point: point, sourceView: imageView)
+        }
+        else
+        {
+            let point : CGPoint = CGPoint(x: view.center.x - (size / 2 - 20), y: view.center.y - (size / 2 + 50 ))
+            getPixelColorAtPoint(point: point, sourceView: imageView)
+        }
         //FUNZIONE DA ESEGUIRE
-        getPixelColorAtPoint(point: point, sourceView: imageView)
+        
         
     }
     //////
@@ -243,6 +253,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     //cambia camera
     @IBAction func setCamera(_ sender: Any) {
         initCamera()
+        cambio=true
     }
     
     func initCamera() {
