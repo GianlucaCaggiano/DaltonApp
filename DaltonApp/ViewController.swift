@@ -317,6 +317,9 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     //fa la foto
     @IBAction func takePhoto(_ sender: Any) {
         takePhoto = true
+        flashImg.setImage(UIImage(named: "icons8-Flash On-50 (1).png"), for: .normal)
+    flashEnabled = false
+        
     }
     
     
