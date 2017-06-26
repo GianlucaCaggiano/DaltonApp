@@ -48,7 +48,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     
     func scheduledTimerWithTimeInterval(){
         // Scheduling timer to Call the function **Countdown** with the interval of 1 seconds
-        timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(self.updateFrame), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.6, target: self, selector: #selector(self.updateFrame), userInfo: nil, repeats: true)
     }
     
     ////
